@@ -1,8 +1,17 @@
-(ns parse-str-clj.core
-  (:gen-class))
+use criterion::{criterion_group, criterion_main, Criterion};
+use edn_rs;
+use std::str::FromStr;
 
-(def edn
-  "{
+fn criterion_benchmark(c: &mut Criterion) {
+    let edn = edn_str();
+    c.bench_function("parse", |b| b.iter(|| edn_rs::Edn::from_str(&edn)));
+}
+
+criterion_group!(benches, criterion_benchmark);
+criterion_main!(benches);
+
+fn edn_str() -> String {
+    "{
         :type :human
         :first-name \"bench\"
         :last-name \"mark\"
@@ -22,14 +31,5 @@
                 :role :great-ideas
             }
         ]
-    }")
-
-(defn -main
-  "I don't do a whole lot ... yet."
-  [& args]
-  ;; warmup here
-  (let [duration     (time (clojure.edn/read-string edn))
-        parsed_edn   (clojure.edn/read-string edn)
-        duration_nav (time (get-in parsed_edn  [:associates 0 :role]))]
-    (println duration)
-    (println duration_nav)))
+    }".to_string()
+}
