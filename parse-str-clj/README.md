@@ -5,6 +5,7 @@
 
 ### Using Criterium
 * Just remember that criterium is a microbenchmark tool that removes GC time and has JVM optimizations, so it is far from how most people use it and GC time is something very important to consider when executing your API.
+* A link with distinctions between [`core/time and criterium/bench`](http://clojure-goes-fast.com/blog/benchmarking-tool-criterium/)
 
 Criterium measures the computation time of an expression. It is designed to address some of the pitfalls of benchmarking, and benchmarking on the JVM in particular.
 - statistical processing of multiple evaluations
