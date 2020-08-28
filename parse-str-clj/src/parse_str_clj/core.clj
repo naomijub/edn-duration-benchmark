@@ -1,4 +1,5 @@
 (ns parse-str-clj.core
+  (:require [criterium.core :refer [bench]])
   (:gen-class))
 
 (def edn
@@ -31,5 +32,6 @@
   (let [duration     (time (clojure.edn/read-string edn))
         parsed_edn   (clojure.edn/read-string edn)
         duration_nav (time (get-in parsed_edn  [:associates 0 :role]))]
+    (bench (clojure.edn/read-string edn))
     (println duration)
     (println duration_nav)))
