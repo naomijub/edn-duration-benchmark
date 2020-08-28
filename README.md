@@ -11,7 +11,7 @@ Simple time-elapsed benchmarks to compare EDN-RS and Clojure native EDN performa
 
 * Rust release mode: `6.972µs`
 * Rust debug mode: `24.294µs`
-* Clojure `edn/read-string`: `39.914 µs`
+* Clojure `edn/read-string`: `26.333 µs`
 
 
 ## Deserializing Edn into struct `Entity`:

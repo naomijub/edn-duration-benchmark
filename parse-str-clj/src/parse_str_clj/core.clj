@@ -29,9 +29,8 @@
   "I don't do a whole lot ... yet."
   [& args]
   ;; warmup here
-  (let [duration     (time (clojure.edn/read-string edn))
+  (let [_     (time (clojure.edn/read-string edn))
         parsed_edn   (clojure.edn/read-string edn)
-        duration_nav (time (get-in parsed_edn  [:associates 0 :role]))]
+        _ (time (-> parsed_edn :associates (get 0) :role))]
     (bench (clojure.edn/read-string edn))
-    (println duration)
-    (println duration_nav)))
+    (bench (-> parsed_edn :associates (get 0) :role))))
