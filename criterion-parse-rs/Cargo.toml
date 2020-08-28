@@ -15,3 +15,7 @@ criterion = "0.3"
 [[bench]]
 name = "parse"
 harness = false
+
+[[bench]]
+name = "navigate"
+harness = false
