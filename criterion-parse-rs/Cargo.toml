@@ -8,6 +8,7 @@ edition = "2018"
 
 [dependencies]
 edn-rs = "0.13.1"
+edn-derive = "*"
 
 [dev-dependencies]
 criterion = "0.3"
@@ -18,4 +19,8 @@ harness = false
 
 [[bench]]
 name = "navigate"
+harness = false
+
+[[bench]]
+name = "deser"
 harness = false

@@ -15,3 +15,8 @@ Found 8 outliers among 100 measurements (8.00%)
   3 (3.00%) high mild
   5 (5.00%) high severe
 ```
+
+```
+deser  time:   [32.112 us 32.530 us 33.116 us]
+(no outliers)
+```
