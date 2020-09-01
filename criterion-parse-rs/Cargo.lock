@@ -105,7 +105,7 @@ version = "0.1.0"
 dependencies = [
  "criterion",
  "edn-derive",
- "edn-rs",
+ "edn-rs 0.13.2 (git+https://github.com/naomijub/edn-rs?branch=chars-opt)",
 ]
 
 [[package]]
@@ -193,11 +193,16 @@ version = "0.3.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "481b8550edae525f7ae6c2df2a8459480dfe253b558c8e137099c66d88b85e14"
 dependencies = [
- "edn-rs",
+ "edn-rs 0.13.2 (registry+https://github.com/rust-lang/crates.io-index)",
  "proc-macro2",
  "quote",
  "syn",
 ]
+
+[[package]]
+name = "edn-rs"
+version = "0.13.2"
+source = "git+https://github.com/naomijub/edn-rs?branch=chars-opt#33a4851a2d6f423878895fbd817d1281ea4b0ae1"
 
 [[package]]
 name = "edn-rs"

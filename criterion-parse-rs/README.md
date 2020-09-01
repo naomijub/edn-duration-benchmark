@@ -2,8 +2,9 @@
 
 
 ## Benchmarking parse: Collecting 100 samples in estimated 5.1256 s (172k iteration)
+- chars-opt
 ```                                                                      
-parse                   time:   [29.361 us 29.447 us 29.541 us]
+parse                   time:   [13.563 us 13.648 us 13.749 us]
 Found 7 outliers among 100 measurements (7.00%)
   2 (2.00%) low mild
   5 (5.00%) high severe
@@ -17,6 +18,6 @@ Found 8 outliers among 100 measurements (8.00%)
 ```
 
 ```
-deser  time:   [32.112 us 32.530 us 33.116 us]
+deser  time:   [19.912 us 19.944 us 19.979 us]
 (no outliers)
 ```

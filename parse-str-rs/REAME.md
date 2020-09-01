@@ -1,7 +1,7 @@
 # Release mode:
-`Time elapsed in edn_rs::from_str is: 110.932µs`
-`Time elapsed to navigate to role_0 ":adm": 6.972µs`
+`Time elapsed in edn_rs::from_str is: 77.57µs`
+`Time elapsed to navigate to role_0 ":adm": 4.224µs`
 
 # Debug mode:
-`Time elapsed in edn_rs::from_str is: 487.179µs`
-`Time elapsed to navigate to role_0 ":adm": 24.294µs`
+`Time elapsed in edn_rs::from_str is: 266.479µs`
+`Time elapsed to navigate to role_0 ":adm": 22.861µs`
