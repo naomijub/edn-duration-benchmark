@@ -7,7 +7,7 @@ Simple time-elapsed benchmarks to compare EDN-RS and Clojure native EDN performa
 * Rust debug mode: `266.479µs`
 * Clojure `edn/read-string`: `4.712235 milis`
 
-## Navigating in Edn value. 3 blocks:
+## Navigating in Edn value. `(-> edn :associates (get 0) :role)` `edn[":associates"][0][":role"]`:
 
 * Rust release mode: `4.224µs`
 * Rust debug mode: `22.861µs`
@@ -66,7 +66,7 @@ Evaluation count : 2765940 in 60 samples of 46099 calls.
 }"
 ```
 
-**Navegation `[:associates 0 :role]`**
+**Navegation `(-> edn :associates (get 0) :role)` and `edn[":associates"][0][":role"]`**
 
 **Rust Entity**
 ```rust
