@@ -38,6 +38,7 @@ Evaluation count : 2765940 in 60 samples of 46099 calls.
    Execution time upper quantile : 27.339060 µs (97.5%)
                    Overhead used : 8.010259 ns
 ```
+[@serioga](https://github.com/serioga) did some more [benchmarks here](https://gist.github.com/serioga/60499dab8248a58899d10a2687d5b77c#file-edn_benchmark-clj-L84-L134)
 
 ### Test:
 
@@ -66,7 +67,7 @@ Evaluation count : 2765940 in 60 samples of 46099 calls.
 }"
 ```
 
-**Navegation `(-> edn :associates (get 0) :role)` and `edn[":associates"][0][":role"]`**
+**Navigation `(-> edn :associates (get 0) :role)` and `edn[":associates"][0][":role"]`**
 
 **Rust Entity**
 ```rust
