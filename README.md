@@ -1,28 +1,11 @@
 # edn-duration-benchmark
 Simple time-elapsed benchmarks to compare EDN-RS and Clojure native EDN performance.
 
-## Parsing edn-string into Edn:
-
-* Rust release mode: `77.57µs`
-* Rust debug mode: `266.479µs`
-* Clojure `edn/read-string`: `4.712235 milis`
-
-## Navigating in Edn value. `(-> edn :associates (get 0) :role)` `edn[":associates"][0][":role"]`:
-
-* Rust release mode: `4.224µs`
-* Rust debug mode: `22.861µs`
-* Clojure `edn/read-string`: `26.333 µs`
-
-## Deserializing Edn into struct `Entity`:
-* Rust release mode: `110.358µs`
-* Rust debug mode: `357.054µs`
-* Clojure `edn/read-string`: `4.712235 milis`
-
 ## Parse with Rust using Criterion
 
 ```
 Benchmarking parse: Collecting 100 samples in estimated 5.1256 s (172k iteration)  
-parse                   time:   [13.563 us 13.648 us 13.749 us]
+parse                   time:   [12.143 us 12.224 us 12.316 us]
 Found 7 outliers among 100 measurements (7.00%)
   2 (2.00%) low mild
   5 (5.00%) high severe
@@ -39,6 +22,43 @@ Evaluation count : 2765940 in 60 samples of 46099 calls.
                    Overhead used : 8.010259 ns
 ```
 [@serioga](https://github.com/serioga) did some more [benchmarks here](https://gist.github.com/serioga/60499dab8248a58899d10a2687d5b77c#file-edn_benchmark-clj-L84-L134)
+
+## Other Rust Benchmarks
+
+```                                                                      
+parse     1. time:   [12.143 us 12.224 us 12.316 us]
+          2. time:   [12.499 us 12.666 us 12.843 us] 
+          3. time:   [12.469 us 12.712 us 12.951 us] 
+```
+
+```
+navigate  1. time:   [4.32 ns 5.04 ns 5.98 ns]
+          2. time:   [11.26 ns 11.76 ns 11.38 ns]
+          3. time:   [8.83 ns 8.90 ns 8.18 ns] 
+```
+
+```
+deser     1. time:   [16.053 us 16.269 us 16.552 us]
+          2. time:   [15.863 us 15.899 us 15.936 us]  
+          3. time:   [16.118 us 16.233 us 16.372 us]
+```
+
+## Parsing edn-string into Edn:
+
+* Rust release mode: `77.57µs`
+* Rust debug mode: `266.479µs`
+* Clojure `edn/read-string`: `4.712235 milis`
+
+## Navigating in Edn value. `(-> edn :associates (get 0) :role)` `edn[":associates"][0][":role"]`:
+
+* Rust release mode: `4.224µs`
+* Rust debug mode: `22.861µs`
+* Clojure `edn/read-string`: `26.333 µs`
+
+## Deserializing Edn into struct `Entity`:
+* Rust release mode: `98.359µs`
+* Rust debug mode: `328.054µs`
+* Clojure `edn/read-string`: `4.712235 milis`
 
 ### Test:
 

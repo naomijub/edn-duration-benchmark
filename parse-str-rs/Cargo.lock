@@ -2,8 +2,9 @@
 # It is not intended for manual editing.
 [[package]]
 name = "edn-rs"
-version = "0.13.2"
-source = "git+https://github.com/naomijub/edn-rs?branch=chars-opt#33a4851a2d6f423878895fbd817d1281ea4b0ae1"
+version = "0.15.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "05943712eb94ab9ae99c5221e59f5623593f6493a753b03a1fb71ef886494353"
 
 [[package]]
 name = "parse-str-rs"

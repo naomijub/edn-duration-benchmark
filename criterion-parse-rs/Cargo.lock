@@ -189,9 +189,9 @@ dependencies = [
 
 [[package]]
 name = "edn-derive"
-version = "0.3.1"
+version = "0.4.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "481b8550edae525f7ae6c2df2a8459480dfe253b558c8e137099c66d88b85e14"
+checksum = "132e2c195e57d805deb1041234d6e5f54fb0b8a4fcfa077d03b58e792ab25603"
 dependencies = [
  "edn-rs",
  "proc-macro2",
@@ -201,9 +201,9 @@ dependencies = [
 
 [[package]]
 name = "edn-rs"
-version = "0.13.3"
+version = "0.15.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "e5339f08784ac492be40a738abea2901bc5e865c878e306e934d74feb6795899"
+checksum = "05943712eb94ab9ae99c5221e59f5623593f6493a753b03a1fb71ef886494353"
 
 [[package]]
 name = "either"

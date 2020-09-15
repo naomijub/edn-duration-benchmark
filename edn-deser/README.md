@@ -1,5 +1,5 @@
 # Release Mode
-`Time elapsed in Deserializing into Entity structs is: 110.358µs`
+`Time elapsed in Deserializing into Entity structs is: 98.359µs`
 
 # Debug Mode
-`Time elapsed in Deserializing into Entity structs is: 357.054µs`
+`Time elapsed in Deserializing into Entity structs is: 328.315µs`
